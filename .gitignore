@@ -1,0 +1,8 @@
+*.idea
+*.log
+Thumbs.db
+.OS_Store
+*.Sublime-*
+.*.swp
+.swp
+config/µ
