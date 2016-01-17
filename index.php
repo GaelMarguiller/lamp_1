@@ -1,4 +1,5 @@
 <?php
+require_once("config/dbconf.php");
 session_start();
 if(!isset($_SESSION['user'])){
     header("Location: /login.php");
@@ -35,6 +36,11 @@ if( !isset($_POST['guess'])
         unset($_SESSION['choice']);
     }
 }
+$pdo = new PDO($config['host'], $config['user'], $config['password']);
+$req = $pdo -> prepare('UPDATE user SET hight score = grimgor, urnotwrex');
+$req ->execute(array(
+    'hight score' => $_SESSION['best_score'],
+));
 ?>
 <!DOCTYPE html>
 <html lang="en">
