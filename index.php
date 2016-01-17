@@ -36,10 +36,11 @@ if( !isset($_POST['guess'])
         unset($_SESSION['choice']);
     }
 }
+global $config;
 $pdo = new PDO($config['host'], $config['user'], $config['password']);
-$req = $pdo -> prepare('UPDATE user SET hight score = grimgor, urnotwrex');
+$req = $pdo -> prepare('UPDATE user SET hight_score = :grimgor, :urnotwrex');
 $req ->execute(array(
-    'hight score' => $_SESSION['best_score'],
+    'hight_score' => $_SESSION['best_score'],
 ));
 ?>
 <!DOCTYPE html>
