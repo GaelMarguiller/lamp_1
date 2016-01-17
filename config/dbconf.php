@@ -1,6 +1,6 @@
 <?php
 $config = [
-    "host" => "mysql:host=grimgor.loc;dbname=user",
+    "host" => "mysql:host=localhost;dbname=user",
     "user" => "urnotwrex",
     "password" => "Amonamarth66",
 ];

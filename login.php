@@ -12,7 +12,7 @@ $errormessage = null;
 if(isset($_POST['username'])){
     global $config;
     $pdo = new PDO($config['host'], $config['user'], $config['password']);
-    $stmt = $pdo->prepare("SELECT * FROM users
+    $stmt = $pdo->prepare("SELECT * FROM user
                           WHERE login = :login"
     );
     $stmt->bindParam("login",$_POST['username']);
