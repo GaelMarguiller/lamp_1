@@ -15,7 +15,6 @@ if(empty($_SESSION['choice']) || isset($_POST['reset'])){
 }else{
     $choice = $_SESSION['choice'];
 }
-
 $response = null;
 if( !isset($_POST['guess'])
     || empty($_POST['guess'])){
@@ -38,7 +37,7 @@ if( !isset($_POST['guess'])
 }
 global $config;
 $pdo = new PDO($config['host'], $config['user'], $config['password']);
-$req = $pdo -> prepare('UPDATE user SET hight_score = :grimgor, :urnotwrex');
+$req = $pdo -> prepare('UPDATE user SET best_score = :hight_score');
 $req ->execute(array(
     'hight_score' => $_SESSION['best_score'],
 ));
