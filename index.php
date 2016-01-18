@@ -60,8 +60,8 @@ echo "<h3>Leaderboard</h3><table border=1px>";
 echo "<tr><th>User</th><th>Score</th></tr>";
 while ($leaderboardResult = $leaderboard->fetch())
 {
-    echo "<tr><td>".$leaderboardResult['login']."</td>";
-    echo"<td>".$leaderboardResult['best_score']."</td></tr>";
+    echo "<tr><td>".$leaderboardResult = $_SESSION['user']."</td>";
+    echo"<td>".$leaderboardResult = $_SESSION['best_score']."</td></tr>";
 }
 echo "</table><br><br>"
 ?>
