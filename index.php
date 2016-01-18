@@ -41,7 +41,7 @@ $pdo = new PDO($config['host'], $config['user'], $config['password']);
 $req = $pdo -> prepare('UPDATE user SET hight_score = :best_score WHERE login = :login ');
 $req ->execute(array(
     'best_score' => $_SESSION['best_score'],
-    'login' => ['login'],
+    'login' => $_SESSION['user'],
 ));
 ?>
 <!DOCTYPE html>
