@@ -22,7 +22,7 @@ if(isset($_POST['username'])){
         $errormessage = "Wrong username";
     }elseif (empty($_POST["password"])) {
         $errormessage = "No password";
-    }elseif (sha1($_POST["password"]) != $result["password"]) {
+    }elseif (sha1($_POST["password"])!= $result["password"]) {
         $errormessage = "Wrong password";
     }else{
         $_SESSION['user'] = $result["login"];
