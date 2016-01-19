@@ -1,8 +1,8 @@
 *.idea
 *.log
 Thumbs.db
-.OS_Store
-*.Sublime-*
+.DS_Store
+*.sublime-*
 .*.swp
 .swp
-config/µ
+config/*
